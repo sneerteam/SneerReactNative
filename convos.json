@@ -1,0 +1,31 @@
+{
+  "convos": [
+    {"convo": {
+      "id": 0,
+      "nickname": "Maico Tesourinha",
+      "received": "moments ago",
+      "unread": 1,
+      "summary": "Good morning, sleepy head!",
+      "selfie": "https://placehold.it/100x100",
+      "messages": ["hello 4", "hello 3", "hello 2", "hello 1", "Good morning, sleepy head!"]
+    }},
+    {"convo": {
+      "id": 1,
+      "nickname": "Carla Folhada",
+      "received": "12:18",
+      "unread": 5,
+      "summary": "Show time",
+      "selfie": "https://placehold.it/100x100",
+      "messages": ["hello 4", "hello 3", "hello 2", "hello 1", "Show time"]
+    }},
+    {"convo": {
+      "id": 2,
+      "nickname": "John Smith",
+      "received": "Friday",
+      "unread": 1,
+      "summary": "Hi, Neide!",
+      "selfie": "https://placehold.it/100x100",
+      "messages": ["hello 4", "hello 3", "hello 2", "hello 1", "Hi, Neide!"]
+    }}
+  ]
+}
