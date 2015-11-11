@@ -1,31 +1,119 @@
 {
-  "convos": [
-    {"convo": {
-      "id": 0,
-      "nickname": "Maico Tesourinha",
-      "received": "moments ago",
-      "unread": 1,
-      "summary": "Good morning, sleepy head!",
-      "selfie": "https://placehold.it/100x100",
-      "messages": ["hello 4", "hello 3", "hello 2", "hello 1", "Good morning, sleepy head!"]
-    }},
-    {"convo": {
-      "id": 1,
-      "nickname": "Carla Folhada",
-      "received": "12:18",
-      "unread": 5,
-      "summary": "Show time",
-      "selfie": "https://placehold.it/100x100",
-      "messages": ["hello 4", "hello 3", "hello 2", "hello 1", "Show time"]
-    }},
-    {"convo": {
-      "id": 2,
-      "nickname": "John Smith",
-      "received": "Friday",
-      "unread": 1,
-      "summary": "Hi, Neide!",
-      "selfie": "https://placehold.it/100x100",
-      "messages": ["hello 4", "hello 3", "hello 2", "hello 1", "Hi, Neide!"]
-    }}
-  ]
+  "party": {
+    "id": 42,
+    "name": "Neide Silva",
+    "convos": [
+      {
+        "convo": {
+          "id": 0,
+          "party": 43,
+          "nickname": "Carla Folhada",
+          "received": "moments ago",
+          "unread": 1,
+          "summary": "Hello 4",
+          "selfie": "https://placehold.it/100x100",
+          "messages": [
+            {
+              "id": 1,
+              "text": "Hello 1",
+              "party": 42,
+              "date": "friday"
+            },
+            {
+              "id": 2,
+              "text": "Hello 2",
+              "party": 43,
+              "date": "40 mins ago"
+            },
+            {
+              "id": 3,
+              "text": "Hello 3",
+              "party": 42,
+              "date": "30 mins ago"
+            },
+            {
+              "id": 4,
+              "text": "Hello 4",
+              "party": 43,
+              "date": "moments ago"
+            }
+          ]
+        }
+      },
+      {
+        "convo": {
+          "id": 1,
+          "party": 44,
+          "nickname": "Maico Manero",
+          "received": "moments ago",
+          "unread": 2,
+          "summary": "Hello 4",
+          "selfie": "https://placehold.it/100x100",
+          "messages": [
+            {
+              "id": 1,
+              "text": "Hello 1",
+              "party": 42,
+              "date": "friday"
+            },
+            {
+              "id": 2,
+              "text": "Hello 2",
+              "party": 44,
+              "date": "40 mins ago"
+            },
+            {
+              "id": 3,
+              "text": "Hello 3",
+              "party": 42,
+              "date": "30 mins ago"
+            },
+            {
+              "id": 4,
+              "text": "Hello 4",
+              "party": 44,
+              "date": "moments ago"
+            }
+          ]
+        }
+      },
+      {
+        "convo": {
+          "id": 2,
+          "party": 45,
+          "nickname": "John Smith",
+          "received": "moments ago",
+          "unread": 1,
+          "summary": "Hello 4",
+          "selfie": "https://placehold.it/100x100",
+          "messages": [
+            {
+              "id": 1,
+              "text": "Hello 1",
+              "party": 42,
+              "date": "friday"
+            },
+            {
+              "id": 2,
+              "text": "Hello 2",
+              "party": 45,
+              "date": "40 mins ago"
+            },
+            {
+              "id": 3,
+              "text": "Hello 3",
+              "party": 42,
+              "date": "30 mins ago"
+            },
+            {
+              "id": 4,
+              "text": "Hello 4",
+              "party": 45,
+              "date": "moments ago"
+            }
+          ]
+        }
+      }
+    ]
+  }
 }
