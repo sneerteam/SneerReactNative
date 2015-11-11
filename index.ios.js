@@ -1,6 +1,7 @@
 'use babel';
 
 import React, {
+  Component,
   AppRegistry,
   NavigatorIOS,
   StyleSheet,
@@ -8,24 +9,23 @@ import React, {
 
 import Convos from './Convos';
 
-const SneerReactNative = React.createClass({
-  render: function() {
+class SneerReactNative extends Component {
+  render() {
     return (
       <NavigatorIOS
-        style={styles.container}
-        initialRoute={{
-          title: 'Contacts',
-          component: Convos,
-        }}
+      style={styles.container}
+      initialRoute={{
+        title: 'Contacts',
+        component: Convos,
+      }}
       />
     );
-  },
-});
+  }
+}
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: 'row',
     backgroundColor: '#F5FCFF',
   },
 });

@@ -1,54 +1,53 @@
 'use babel';
 
 import React, {
+  Component,
   Image,
-  NavigatorIOS,
   ListView,
   StyleSheet,
   Text,
   View,
 } from 'react-native';
 
-//const REQUEST_URL = 'http://127.0.0.1:8000/convos.json';
+// const REQUEST_URL = 'http://127.0.0.1:8000/convos.json';
 const REQUEST_URL = 'https://gist.githubusercontent.com/felipebueno/22dc6ea5d968baeefbc7/raw/a385077dfb08d64375074331397c8b4bd04d905e/convos.json';
 
-const Convos = React.createClass({
-  getInitialState: function() {
-    return {
+class Convos extends Component {
+  constructor() {
+    super();
+    this.state = {
       dataSource: new ListView.DataSource({
         rowHasChanged: (row1, row2) => row1 !== row2,
       }),
       loaded: false,
     };
-  },
+  }
 
-  componentDidMount: function() {
+  componentDidMount() {
     this.fetchData();
-  },
+  }
 
-  fetchData: function() {
+  fetchData() {
     fetch(REQUEST_URL)
       .then((response) => response.json())
       .then((responseData) => {
         this.setState({
           dataSource: this.state.dataSource.cloneWithRows(responseData.convos),
           loaded: true,
-        }, () => {
-          console.log('FELIPETESTE convos: ' + responseData.convos);
         });
       })
       .done();
-  },
+  }
 
-  renderLoadingView: function() {
+  renderLoadingView() {
     return (
       <View style={styles.container}>
-      <Text>Loading movies...</Text>
+      <Text>Loading...</Text>
       </View>
     );
-  },
+  }
 
-  renderMovie: function(row) {
+  renderConvo(row) {
     return (
       <View style={styles.container}>
       <Image
@@ -62,9 +61,9 @@ const Convos = React.createClass({
       </View>
       </View>
     );
-  },
+  }
 
-  render: function() {
+  render() {
     if (!this.state.loaded) {
       return this.renderLoadingView();
     }
@@ -72,12 +71,12 @@ const Convos = React.createClass({
     return (
       <ListView
       dataSource={this.state.dataSource}
-      renderRow={this.renderMovie}
+      renderRow={this.renderConvo}
       style={styles.listView}
       />
     );
-  },
-});
+  }
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -95,14 +94,23 @@ const styles = StyleSheet.create({
     margin: 4,
   },
   nickname: {
+    margin: 2,
+    paddingTop: 4,
+    fontWeight: 'bold',
   },
   summary: {
+    margin: 2,
+    color: 'grey',
   },
   received: {
+    color: 'grey',
     textAlign: 'right',
+    fontWeight: 'bold',
   },
   unread: {
+    color: 'green',
     textAlign: 'right',
+    fontWeight: 'bold',
   },
   listView: {
     backgroundColor: '#F5FCFF',
