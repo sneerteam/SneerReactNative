@@ -1,5 +1,3 @@
-'use babel';
-
 import React, {
   Component,
   Image,
@@ -50,15 +48,15 @@ class Convos extends Component {
   renderConvo(row) {
     return (
       <View style={styles.container}>
-      <Image
-      source={{uri: row.convo.selfie}}
-      style={styles.selfie} />
-      <View style={styles.rightContainer}>
-      <Text style={styles.nickname}>{row.convo.nickname}</Text>
-      <Text style={styles.summary}>{row.convo.summary}</Text>
-      <Text style={styles.received}>{row.convo.received}</Text>
-      <Text style={styles.unread}>{row.convo.unread}</Text>
-      </View>
+        <Image
+        source={{uri: row.convo.selfie}}
+        style={styles.selfie} />
+        <View style={styles.rightContainer}>
+          <Text style={styles.nickname}>{row.convo.nickname}</Text>
+          <Text style={styles.summary}>{row.convo.summary}</Text>
+          <Text style={styles.received}>{row.convo.received}</Text>
+          <Text style={styles.unread}>{row.convo.unread}</Text>
+        </View>
       </View>
     );
   }
@@ -80,7 +78,7 @@ class Convos extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 2,
     flexDirection: 'row',
     backgroundColor: '#F5FCFF',
   },
@@ -113,7 +111,9 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   listView: {
+    paddingTop: 64,
     backgroundColor: '#F5FCFF',
+    marginBottom: 49,
   },
 });
 
